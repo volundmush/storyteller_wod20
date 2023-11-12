@@ -11,15 +11,13 @@ class Mortal(_V20Template):
 
 
 class Vampire(_V20Template):
+    """
+    Developer Notes:
+
+    Clan and Path are left open because V20 has a crazy amount of possible Clans/Bloodlines/Legacies which can be written
+    in there. I'm not going to try to list them all. Let people write whatever they want in there.
+    """
+
     power_stat = "Generation"
-    fields = ["Clan", "Path", "Nature", "Demeanor", "Bloodline"]
-    field_choices = {
-        "Clan": ["Assamite", "Brujah", "Followers of Set", "Gangrel", "Giovanni", "Lasombra", "Malkavian", "Nosferatu",
-                 "Ravnos", "Toreador", "Tremere", "Tzimisce", "Ventrue", "Caitiff"],
-        "Path": ["Humanity", "Blood", "Bones", "Caine", "Cathari", "Feral Heart", "Honorable Accord", "Lilith",
-                 "Metamorphosis", "Night", "Paradox", "Power and the Inner Voice", "Typhon"]
-    }
-    field_defaults = {
-        "Clan": "Brujah",
-        "Path": "Humanity"
-    }
+    fields = ["Clan", "Path", "Nature", "Demeanor"]
+    field_defaults = {"Path": "Humanity"}
