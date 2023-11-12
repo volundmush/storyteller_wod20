@@ -6,7 +6,7 @@ class M20(WoD20):
         super().__init__(alias, name, key=key)
         self.setup_templates("storyteller_wod20.mage.templates")
         self.setup_handlers("storyteller_wod20.mage.handlers")
-        self.talents = [
+        self.talents_abilities = [
             "Alertness",
             "Art",
             "Athletics",
@@ -19,7 +19,7 @@ class M20(WoD20):
             "Streetwise",
             "Subterfuge",
         ]
-        self.skills = [
+        self.skills_abilities = [
             "Crafts",
             "Drive",
             "Etiquette",
@@ -32,7 +32,7 @@ class M20(WoD20):
             "Survival",
             "Technology",
         ]
-        self.knowledges = [
+        self.knowledges_abilities = [
             "Academics",
             "Computer",
             "Cosmology",

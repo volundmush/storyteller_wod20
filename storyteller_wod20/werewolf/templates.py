@@ -1,8 +1,11 @@
+from storyteller.utils import get_story
 from storyteller_wod20.templates import _WoD20Template
 
 
 class _W20Template(_WoD20Template):
     renown_types = list()
+    color_overrides = {"border": "g", "title": "c", "slash": "C"}
+    sheet_footer = "Werewolf: The Apocalypse"
 
 
 class Mortal(_W20Template):
@@ -10,8 +13,18 @@ class Mortal(_W20Template):
 
 
 class _Fera(_W20Template):
-    power_stat = "Gnosis"
+    power_stat = "Rank"
     advantages = ["Willpower", "Rank", "Rage", "Gnosis"]
+
+    def get_right_columns(self, target):
+        out = super().get_left_columns(target)
+
+        story = get_story(target)
+        handler = story.handlers_dict["Advantages"]
+        if rank := handler.get("Rank"):
+            out.append(("Rank", str(rank.value)))
+
+        return out
 
 
 class Ajaba(_Fera):
@@ -34,6 +47,7 @@ class Ananasi(_Fera):
     field_defaults = {"Breed": "Homid", "Aspect": "Tenere"}
     form_choices = ["Homid", "Lilian", "Pithus", "Crawlerling"]
     renown_types = ["Cunning", "Obedience", "Wisdom"]
+    advantages = ["Willpower", "Rank", "Gnosis"]
 
 
 class Apis(_Fera):

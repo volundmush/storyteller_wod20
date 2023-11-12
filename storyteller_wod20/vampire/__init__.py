@@ -6,7 +6,7 @@ class V20(WoD20):
         super().__init__(alias, name, key=key)
         self.setup_templates("storyteller_wod20.vampire.templates")
         self.setup_handlers("storyteller_wod20.vampire.handlers")
-        self.talents = [
+        self.talents_abilities = [
             "Alertness",
             "Athletics",
             "Awareness",
@@ -18,7 +18,7 @@ class V20(WoD20):
             "Streetwise",
             "Subterfuge",
         ]
-        self.skills = [
+        self.skills_abilities = [
             "Animal Ken",
             "Crafts",
             "Drive",
@@ -30,7 +30,7 @@ class V20(WoD20):
             "Stealth",
             "Survival",
         ]
-        self.knowledges = [
+        self.knowledges_abilities = [
             "Academics",
             "Computer",
             "Finance",
