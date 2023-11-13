@@ -17,7 +17,7 @@ class _Fera(_W20Template):
     advantages = ["Willpower", "Rank", "Rage", "Gnosis"]
 
     def get_right_columns(self, target):
-        out = super().get_left_columns(target)
+        out = super().get_right_columns(target)
 
         story = get_story(target)
         handler = story.handlers_dict["Advantages"]

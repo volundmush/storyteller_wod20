@@ -3,6 +3,7 @@ from storyteller_wod20.templates import _WoD20Template
 
 class _EXVSWODTemplate(_WoD20Template):
     charm_categories = list()
+    sheet_footer = "Exalted vs World of Darkness"
 
 
 class Mortal(_EXVSWODTemplate):

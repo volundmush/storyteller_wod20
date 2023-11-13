@@ -6,6 +6,7 @@ class WoD20(Game):
     def __init__(self, alias: str, name: str, key: str = None):
         super().__init__(alias, name, key=key)
         self.setup_handlers("storyteller_wod20.handlers")
+        self.setup_pools("storyteller_wod20.pools")
         self.talents_abilities = list()
         self.skills_abilities = list()
         self.knowledges_abilities = list()

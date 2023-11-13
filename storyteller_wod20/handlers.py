@@ -15,7 +15,10 @@ from storyteller.handlers import (
     BackgroundHandler as _BackgroundHandler,
 )
 
-from storyteller.handlers import FooterHandler as _FooterHandler
+from storyteller.handlers import (
+    FooterHandler as _FooterHandler,
+    PoolHandler as _PoolHandler,
+)
 
 
 class TemplateHandler(_TemplateHandler):
@@ -59,4 +62,8 @@ class FlawHandler(_FlawHandler):
 
 
 class FooterHandler(_FooterHandler):
+    pass
+
+
+class PoolHandler(_PoolHandler):
     pass

@@ -3,7 +3,7 @@ from storyteller_wod20.templates import _WoD20Template
 
 
 class _V20Template(_WoD20Template):
-    pass
+    sheet_footer = "Vampire: The Masquerade"
 
 
 class Mortal(_V20Template):

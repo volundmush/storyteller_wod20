@@ -3,7 +3,7 @@ from storyteller_wod20.templates import _WoD20Template
 
 
 class _M20Template(_WoD20Template):
-    pass
+    sheet_footer = "Mage: The Ascension"
 
 
 class Mortal(_M20Template):
